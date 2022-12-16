@@ -13,10 +13,20 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAllCountries(){
+    console.log("getAllCountries running")
     return this.http.get<Country[]>(`${this.api}/all`)
   }
 
   getCountryByName(name: string){
-    return this.http.get<Country[]>(`$(this.api}/name/${name}`).pipe(map(([res])=>{return res}))
+    console.log("getCountryByName running")
+    return this.http.get<Country>(`$(this.api}/name/${name}`).pipe(map((res)=>{return res}))
+  }
+
+  getCountriesByCodes(codes: string[]) {
+    console.log("getCountriesByCodes running")
+    console.log(`${this.api}/alpha/${codes.join(';')}`);
+    return this.http.get<Country[]>(
+      `${this.api}/alpha?codes=${codes.join(';')}`
+    );
   }
 }

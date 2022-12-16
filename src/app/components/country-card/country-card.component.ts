@@ -11,4 +11,6 @@ import { ActivatedRoute } from '@angular/router';
 export class CountryCardComponent {
   constructor(public route: ActivatedRoute){}
    @Input() country!: Country;
+
+
 }

@@ -1,20 +1,23 @@
-<p>details works!</p>
-<p>{{country$.name.common}}</p>
-<<!-- <div id="left-side">
-  <img [src]="country.flags.png" alt="flag" />
-</div>
-<div id="right-side">
-  <div id="details">
-    <div>
-      <p><strong>Native Name: </strong>{{country.name.nativeName}}</p>
-      <p><strong>Population: </strong>{{country.population | number:"0"}}</p>
-      <p><strong>Region: </strong>{{country.region}}</p>
-      <p><strong>Sub Region: </strong>{{country.subregion}}</p>
-      <p><strong>Capital: </strong>{{country.capital}}</p>
-    </div>
-    <div>
-      <p><strong>Top Level Domain: </strong>{{country.tld}}</p>
-      <p><strong>Currencies: </strong>{{country.currencies}}</p>
-      <p><strong>Languages: </strong>{{country.languages}}</p>
-    </div>
-</div> -->>
+<div *ngIf="country$">
+  <h1>{{country$}}</h1>
+  <h2>{{countryBorders$}}</h2>
+  <!-- <p>{{ country$.name.common }}</p> 
+  <div id="left-side"> 
+    <img [src]="country$.flags.png" alt="flag" /> 
+  </div> 
+  <div id="right-side"> 
+    <div id="details">
+      <div>
+        <p><strong>Native Name: </strong>{{ country$.name.nativeName }}</p> 
+        <p><strong>Population: </strong>{{ country$.population | number : '0.0' }}</p> 
+        <p><strong>Region: </strong>{{ country$.region }}</p> 
+        <p><strong>Sub Region: </strong>{{ country$.subregion }}</p> 
+        <p><strong>Capital: </strong>{{ country$.capital }}</p></div>
+        <div> 
+          <p><strong>Top Level Domain: </strong>{{ country$.tld }}</p> 
+          <p><strong>Currencies: </strong>{{ country$.currencies }}</p> 
+          <p><strong>Languages: </strong>{{ country$.languages }}</p>
+       </div>
+    </div> 
+  </div> 
+  </div> -->
