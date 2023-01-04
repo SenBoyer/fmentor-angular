@@ -1,3 +1,11 @@
-<div>
+<!-- <div>
+  <input type="text" class="form-control" (input)="filterCountries($event.data)"/>
   <app-country-card *ngFor="let country of countries$ | async" [country]="country"></app-country-card>
+</div> -->
+
+<input type="text" [formControl]="myControl" />
+
+<div *ngFor="let country of countries | async | filterList : searchText">
+  <div>Name: {{ country.name.common }}</div>>
 </div>
+

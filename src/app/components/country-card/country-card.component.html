@@ -1,4 +1,4 @@
-<div *ngIf="country" [routerLink]="'/' + country.name.common">
+<a *ngIf="country" [routerLink]="'/' + country.name.common">
   <img [src]="country.flags.png" alt="flag" />
   <h3>{{country.name.common}}</h3>
   <p>
@@ -13,4 +13,4 @@
     <strong>Capital: </strong>
     {{country.capital}}
   </p>
-</div>
+</a>
