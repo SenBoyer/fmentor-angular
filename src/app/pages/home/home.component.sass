@@ -1,0 +1,117 @@
+
+.country-card-wrapper
+  width: 100vw
+  display: flex
+  justify-content: center
+  background-color: hsl(0, 0%, 98%)
+
+  :host-context(.dark) .country-card-wrapper
+    background-color: hsl(207, 26%, 17%)
+
+.country-card-container
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  column-gap: 5px
+  row-gap: 5px
+  margin-left: 4rem
+
+  @media screen and (max-width: 760px)
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+
+.country-cards
+  padding: 0 1rem
+  display: grid
+  row-gap: 1rem
+
+  @media (min-width: 376px)
+    padding: 0 0rem
+    grid-template-columns: 1fr 1fr 1fr
+    column-gap: 5px
+    row-gap: 5px
+
+.country-filters
+  margin: 2rem 1rem
+  display: flex
+  flex-direction: column
+  @media (min-width: 376px)
+    margin: 2rem 5rem
+    flex-direction: row
+    justify-content: space-between
+
+  app-dropdown
+    width: 60%
+
+    &
+      width: 25%
+
+.search-filter
+  border-radius: 0.25rem
+  font-size: 1rem
+  padding: 1rem
+  @media (min-width: 376px)
+    width: 33%
+
+  span
+    font-size: 1rem
+    padding-right: 0.5rem
+
+  input
+    font-size: 1rem
+    border: none
+    background-color: inherit
+
+:host-context(.light)
+  .search-filter
+    background-color: var(--l-element)
+    color: var(--l-input)
+    input::placeholder
+      color: var(--l-input)
+
+:host-context(.dark)
+
+  &
+    background-color: var(--d-element)
+    color: var(--d-text)
+    input::placeholder
+      color: var(--d-text)
+
+.mini-nav
+  display: flex
+  justify-content: space-between
+  background-color: hsl(0, 0%, 98%)
+  margin: 0 70px
+
+  :host-context(.dark) .mini-nav
+    background-color: hsl(207, 26%, 17%)
+
+:host-context(.dark) input
+  background-color: hsl(209, 23%, 22%)
+  color: white
+
+:host-context(.dark) select
+  background-color: hsl(209, 23%, 22%)
+  color: white
+
+.scroll-top
+  bottom: 0
+  cursor: pointer
+  margin: 0 125px
+  position: fixed
+  opacity: 0
+  display: flex
+  justify-content: center
+
+  #arrow
+    padding-left: 9px
+    font-size: 20px
+
+.show-scroll-top
+  @media screen and (max-width: 760px)
+    opacity: 1 !important
+    transition: all 0.2s ease-in-out
+
+:host-context(.dark) .scroll-top
+  background-color: hsl(207, 26%, 17%)
+  color: white

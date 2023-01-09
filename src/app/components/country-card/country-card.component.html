@@ -1,16 +1,23 @@
-<a *ngIf="country" [routerLink]="'/' + country.name.common">
-  <img [src]="country.flags.png" alt="flag" />
-  <h3>{{country.name.common}}</h3>
-  <p>
-    <strong>Population: </strong>
-    {{country.population | number:"1.0"}}
-  </p>
-  <p>
-    <strong>Region: </strong>
-    {{country.region}}
-  </p>
-  <p>
-    <strong>Capital: </strong>
-    {{country.capital}}
-  </p>
-</a>
+<mat-card class="example-card">
+  <mat-card-header [routerLink]="'/' + country.name.common">
+    <div class="image-wrapper">
+      <img [src]="country.flags.png" alt="flag" />
+    </div>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <h3>{{country.name.common}}</h3>
+    <p>
+      <strong>Population: </strong>
+      {{country.population | number:"1.0"}}
+    </p>
+    <p>
+      <strong>Region: </strong>
+      {{country.region}}
+    </p>
+    <p>
+      <strong>Capital: </strong>
+      {{country.capital}}
+    </p>
+  </mat-card-content>
+</mat-card>

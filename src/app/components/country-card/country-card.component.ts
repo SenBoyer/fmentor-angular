@@ -3,6 +3,7 @@ import { ApiService } from '../../services/api.service';
 import { Country } from '../../types/api';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-country-card',
   templateUrl: './country-card.component.html',

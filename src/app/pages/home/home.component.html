@@ -1,2 +1,19 @@
-<input placeholder="Filter Countries" [formControl]="countryControl" type="text" value="">
-<app-country-card *ngFor="let country of displayCountries" [country]="country"></app-country-card>
+<div class="mini-nav">
+  <div class="search-bar">
+    <input placeholder="Filter Countries" [formControl]="countryControl" type="text" value="">
+  </div>
+  <div class="drop-down">
+    <select #regionRef (change)="updateDisplayRegions(regionRef.value)">
+      <option value="">All</option>
+      <option *ngFor="let region of regionOptions" value="{{region}}">{{region}}</option>
+    </select>
+  </div>
+</div>
+<div class="country-card-wrapper">
+  <div class="country-card-container">
+    <app-country-card *ngFor="let country of displayCountries" [country]="country" class="country-cards"></app-country-card>
+  </div>
+</div>
+<button mat-raised-button (click)="scrollToTop()" class="scroll-top" [ngClass]="{ 'show-scroll-top': windowScrolled }">
+  <mat-icon aria-hidden="false" fontIcon="keyboard_double_arrow_up" id="arrow"></mat-icon>
+</button>

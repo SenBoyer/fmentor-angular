@@ -1,0 +1,52 @@
+.country-profile-wrap
+  display: flex
+  justify-content: center
+  align-items: center
+  border-top: 1px solid black
+  height: 100vh
+  position: relative
+  background-color: hsl(0, 0%, 98%)
+
+  :host-context(.dark) .country-profile-wrap
+    border-top: 1px solid white
+    background-color: hsl(207, 26%, 17%)
+
+.country-profile
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 100vw
+  position: relative
+  background-color: hsl(0, 0%, 98%)
+
+  :host-context(.dark) .country-profile
+    background-color: hsl(207, 26%, 17%)
+    color: white
+
+#country-info
+  display: flex
+  flex-direction: column
+  position: relative
+
+.data-columns
+  display: flex
+
+.border-countries
+  width: 100%
+  display: flex
+
+.border-countries-buttons
+  display: flex
+  p
+    padding-left: 4px
+    border: 1px solid black
+    padding-right: 4px
+    cursor: pointer
+
+#flag-image
+  margin-right: 125px
+  margin-left: 65px
+
+:host-context(.dark) button
+  background-color: hsl(209, 23%, 22%)
+  color: white
